@@ -1,19 +1,8 @@
 /* https://leetcode-cn.com/problems/add-two-numbers/ */
-
-function ListNode(val) {
-    this.val = val;
-    this.next = null;
-}
+import { ListNode } from '../utils/list-node'
 /**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
- */
-/**
- * @param {ListNode} l1
- * @param {ListNode} l2
+ * @param {ListNode|null} l1
+ * @param {ListNode|null} l2
  * @return {ListNode}
  */
 var addTwoNumbers = function (l1, l2) {

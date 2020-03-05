@@ -10,5 +10,12 @@
             "ESNext.BigInt",
             "dom"
         ],
-    }
+        "typeRoots": [
+            "./node_modules/@types",
+            "./typings"
+        ],
+        "paths": {
+            "utils/": "./utils/"
+        }
+    },
 }
