@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "ESNext",
+        "noImplicitAny": false,
+        "strictNullChecks": true,
+        "allowJs": true,
+        "lib": [
+            "es2017",
+            "ESNext.BigInt",
+            "dom"
+        ],
+    }
+}
