@@ -14,8 +14,11 @@
             "./node_modules/@types",
             "./typings"
         ],
+        "baseUrl": ".",
         "paths": {
-            "utils/": "./utils/"
+            "utils/": [
+                "utils/"
+            ]
         }
     },
 }
