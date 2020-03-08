@@ -7,7 +7,7 @@ export function ListNode<T>(val: T): ListNode<T> {
 }
 
 /* 创建链表 */
-export function create_list_by_vals<T>(...args: T[]): ListNode<T> | null {
+export function create_list_by_vals<T>(...args: T[]): ListNode<T> {
     let list: ListNode<T> | null = null
     let first_node: ListNode<T> | null = null
     for (let i = 0; i < args.length; i++) {
@@ -20,7 +20,7 @@ export function create_list_by_vals<T>(...args: T[]): ListNode<T> | null {
             list = list.next
         }
     }
-    return first_node
+    return first_node as ListNode<T>
 }
 
 /* 链表转换为数组 */
