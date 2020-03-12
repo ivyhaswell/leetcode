@@ -1,6 +1,5 @@
 import { assert } from 'chai'
 import { maxSubArray } from './solution'
-import { maxSubArray as maxSubArray2 } from './solution2'
 
 function run_test(solution) {
     assert.equal(
@@ -27,5 +26,4 @@ function run_test(solution) {
 
 describe('Basic Test', function () {
     run_test(maxSubArray)
-    run_test(maxSubArray2)
 })
