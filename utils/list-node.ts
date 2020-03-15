@@ -45,7 +45,7 @@ export function list_to_array<T>(list: ListNode<T>): T[] {
 }
 
 /* 找到链表尾节点 */
-export function find_list_tail(head) {
+export function find_list_tail<T>(head: ListNode<T>): ListNode<T> {
     let p = head
     while (p.next) {
         p = p.next
@@ -54,11 +54,24 @@ export function find_list_tail(head) {
 }
 
 /* 找到链表第n个节点 */
-export function find_nth_node_in_list(head, n) {
-    let p = head
+export function find_nth_node_in_list<T>(head: ListNode<T>, n: number): ListNode<T> | null {
+    let p: ListNode<T> | null = head
     while (n && p) {
         p = p.next
         n--
     }
     return p
+}
+
+/* 创建循环列表 */
+export function create_cycle_list(vals: number[], pos: number) {
+    let head = create_list_by_vals(...vals)
+    if (pos >= 0) {
+        let pos_node = find_nth_node_in_list(head, pos)
+        if (!pos_node) {
+            throw `no pos: ${pos} at arr ${vals}`
+        }
+        find_list_tail(head).next = pos_node
+    }
+    return head
 }
