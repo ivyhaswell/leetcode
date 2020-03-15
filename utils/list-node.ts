@@ -6,6 +6,15 @@ export function ListNode<T>(val: T): ListNode<T> {
     }
 }
 
+/* 双向链表的节点 */
+export function DoubleLinkedListNode<T>(val: T): DoubleLinkedListNode<T> {
+    return {
+        val,
+        prev: null,
+        next: null,
+    }
+}
+
 /* 创建链表 */
 export function create_list_by_vals<T>(...args: T[]): ListNode<T> {
     let list: ListNode<T> | null = null
