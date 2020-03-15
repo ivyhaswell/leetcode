@@ -34,3 +34,22 @@ export function list_to_array<T>(list: ListNode<T>): T[] {
 
     return arr
 }
+
+/* 找到链表尾节点 */
+export function find_list_tail(head) {
+    let p = head
+    while (p.next) {
+        p = p.next
+    }
+    return p
+}
+
+/* 找到链表第n个节点 */
+export function find_nth_node_in_list(head, n) {
+    let p = head
+    while (n && p) {
+        p = p.next
+        n--
+    }
+    return p
+}
