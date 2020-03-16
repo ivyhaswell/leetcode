@@ -14,8 +14,8 @@ export function create_tree_by_arr<T>(arr: T[]): TreeNode<T> {
     let children: TreeNode<T>[] = []
     for (let i = 1; i < arr.length; i += 2) {
         let parent = parents.shift() as TreeNode<T>
-        let left_node = arr[i] ? new TreeNode(arr[i]) : null
-        let right_node = arr[i + 1] ? new TreeNode(arr[i + 1]) : null
+        let left_node = arr[i] != null ? new TreeNode(arr[i]) : null
+        let right_node = arr[i + 1] != null ? new TreeNode(arr[i + 1]) : null
         parent.left = left_node
         parent.right = right_node
         children.push(left_node, right_node)
